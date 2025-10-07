@@ -1,4 +1,4 @@
-#main-window[titlepreface*="XXX"] #TabsToolbar
+#main-window[titlepreface*="|"] #TabsToolbar
 {
     visibility: collapse;
 }
@@ -12,26 +12,26 @@
 #main-window[uidensity="touch"] #titlebar { height: 3.35em !important; }
 #main-window[uidensity="compact"] #titlebar { height: 2.7em !important; }
 /* Hidden state: Hide native tabs strip */
-#main-window[titlepreface*="XXX"] #titlebar { height: 0 !important; }
+#main-window[titlepreface*="|"] #titlebar { height: 0 !important; }
 /* Hidden state: Fix z-index of active pinned tabs */
-#main-window[titlepreface*="XXX"] #tabbrowser-tabs { z-index: 0 !important; }
+#main-window[titlepreface*="|"] #tabbrowser-tabs { z-index: 0 !important; }
 
 /*Reference https://www.userchrome.org/*/
 /* Hide title bar but keep window controls (minimize, maximize, close) */
 /*Hide tabs and other things inside the titlebar, except window buttons*/
-#main-window[titlepreface*="XXX"] .tabbrowser-tab{  display: none !important; }
-#main-window[titlepreface*="XXX"] .scrollbox-clip{  width: 0 !important; }
-#main-window[titlepreface*="XXX"] #alltabs-button{  display: none !important; }
-#main-window[titlepreface*="XXX"] .toolbar-items{  display: none !important; }
+#main-window[titlepreface*="|"] .tabbrowser-tab{  display: none !important; }
+#main-window[titlepreface*="|"] .scrollbox-clip{  width: 0 !important; }
+#main-window[titlepreface*="|"] #alltabs-button{  display: none !important; }
+#main-window[titlepreface*="|"] .toolbar-items{  display: none !important; }
 /*Make sure that the titlebar and navbar are both on the same line*/
-/*#main-window[titlepreface*="XXX"] #navigator-toolbox{  display: flex !important; box-sizing: border-box; justify-content:space-between; flex-direction: row-reverse;   flex-wrap: wrap; }*/
-#main-window[titlepreface*="XXX"] .titlebar-spacer{  display: none !important; }
-#main-window[titlepreface*="XXX"] #nav-bar{border-radius: 5px 0 0 0; display: flex; box-sizing: border-box; padding-top: 2px; align-items: center; flex: 1; flex-basis: 50%; width: 100% !important; }
+/*#main-window[titlepreface*="|"] #navigator-toolbox{  display: flex !important; box-sizing: border-box; justify-content:space-between; flex-direction: row-reverse;   flex-wrap: wrap; }*/
+#main-window[titlepreface*="|"] .titlebar-spacer{  display: none !important; }
+#main-window[titlepreface*="|"] #nav-bar{border-radius: 5px 0 0 0; display: flex; box-sizing: border-box; padding-top: 2px; align-items: center; flex: 1; flex-basis: 50%; width: 100% !important; }
 /* on GNOME you can use max-width: 48px below, if you only have the "Close" button on windows (default) */
-#main-window[titlepreface*="XXX"] #titlebar{border-radius: 0 5px 0 0; border-left: none !important; margin-top: 1px; flex: 1; flex-basis: 50%; width:10% !important; display: flex; max-width: 100px;   align-items: center;background-color: var(--toolbar-bgcolor) !important; border-left: 1px solid var(--toolbar-color);}
-#main-window[titlepreface*="XXX"] #titlebar:-moz-window-inactive{opacity: 1 !important;}
-#main-window[titlepreface*="XXX"] #TabsToolbar > *:not(.titlebar-buttonbox-container) {display: none !important;}
-#main-window[titlepreface*="XXX"] .titlebar-buttonbox-container  { 
+#main-window[titlepreface*="|"] #titlebar{border-radius: 0 5px 0 0; border-left: none !important; margin-top: 1px; flex: 1; flex-basis: 50%; width:10% !important; display: flex; max-width: 100px;   align-items: center;background-color: var(--toolbar-bgcolor) !important; border-left: 1px solid var(--toolbar-color);}
+#main-window[titlepreface*="|"] #titlebar:-moz-window-inactive{opacity: 1 !important;}
+#main-window[titlepreface*="|"] #TabsToolbar > *:not(.titlebar-buttonbox-container) {display: none !important;}
+#main-window[titlepreface*="|"] .titlebar-buttonbox-container  { 
 display: flex !important; 
 box-sizing: border-box; 
 justify-content:space-between; 
