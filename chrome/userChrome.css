@@ -71,18 +71,20 @@ flex-wrap: wrap;
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
   overflow: hidden !important;
   position: fixed !important;
-  top: 41px !important;      /* Adjust so it sits just below the titlebar */
+  top: 41px !important;
   right: 0 !important;
   bottom: 0 !important;
   width: var(--wide-tab-width) !important;
-  /* In collapsed state, shift left by (300px - 32px) so that only the 32px handle remains */
   transform: translateX(calc(var(--wide-tab-width) - var(--thin-tab-width))) !important;
   z-index: 9999;
+  transition: transform 0.15s ease-in-out 1s !important;
 }
 
-/* Expanded state on hover: reset transform instantly (no transition) */
+/* Expanded state on hover, focus, OR while dragging */
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar {
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:focus-within,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][data-dragging="true"] {
   transform: translateX(0) !important;
+  transition: transform 0.15s ease-out 0s !important;
   z-index: 9998;
 }
