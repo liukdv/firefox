@@ -22,6 +22,15 @@ user_pref("browser.tabs.loadDivertedInBackground", true);
 user_pref("browser.tabs.maxOpenBeforeWarn", 5);
 user_pref("browser.search.context.loadInBackground", true);
 
+// AI
+user_pref("browser.ml.chat.nimbus", "ai-chatbot-page-summarization-mvp-treatment-a-callout-badge-rollout-v2:treatment-a-callout-badge");
+user_pref("browser.ml.chat.page", true);
+user_pref("browser.ml.chat.page.footerBadge", false);
+user_pref("browser.ml.chat.page.menuBadge", false);
+user_pref("browser.ml.chat.provider", "https://gemini.google.com");
+user_pref("browser.ml.explain.enabled", true);
+user_pref("browser.ml.rewrite.enabled", true);
+user_pref("browser.ml.summarize.enabled", true);
 
 // New Tab Page
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
